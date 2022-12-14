@@ -106,9 +106,10 @@
             // 
             // podatekTextBox
             // 
-            this.podatekTextBox.Location = new System.Drawing.Point(145, 201);
+            this.podatekTextBox.Location = new System.Drawing.Point(131, 201);
             this.podatekTextBox.Name = "podatekTextBox";
-            this.podatekTextBox.Size = new System.Drawing.Size(100, 23);
+            this.podatekTextBox.ReadOnly = true;
+            this.podatekTextBox.Size = new System.Drawing.Size(114, 23);
             this.podatekTextBox.TabIndex = 5;
             // 
             // label6
@@ -124,6 +125,7 @@
             // 
             this.skladkaZdrowotnaTextBox.Location = new System.Drawing.Point(131, 174);
             this.skladkaZdrowotnaTextBox.Name = "skladkaZdrowotnaTextBox";
+            this.skladkaZdrowotnaTextBox.ReadOnly = true;
             this.skladkaZdrowotnaTextBox.Size = new System.Drawing.Size(115, 23);
             this.skladkaZdrowotnaTextBox.TabIndex = 3;
             // 
@@ -198,6 +200,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.skladkaRentowaTextBox.Location = new System.Drawing.Point(125, 32);
             this.skladkaRentowaTextBox.Name = "skladkaRentowaTextBox";
+            this.skladkaRentowaTextBox.ReadOnly = true;
             this.skladkaRentowaTextBox.Size = new System.Drawing.Size(115, 23);
             this.skladkaRentowaTextBox.TabIndex = 6;
             // 
@@ -208,6 +211,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.skladkaEmerytalnaTextBox.Location = new System.Drawing.Point(125, 4);
             this.skladkaEmerytalnaTextBox.Name = "skladkaEmerytalnaTextBox";
+            this.skladkaEmerytalnaTextBox.ReadOnly = true;
             this.skladkaEmerytalnaTextBox.Size = new System.Drawing.Size(115, 23);
             this.skladkaEmerytalnaTextBox.TabIndex = 3;
             // 
@@ -218,6 +222,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.skladkaChorobowaTextBox.Location = new System.Drawing.Point(125, 60);
             this.skladkaChorobowaTextBox.Name = "skladkaChorobowaTextBox";
+            this.skladkaChorobowaTextBox.ReadOnly = true;
             this.skladkaChorobowaTextBox.Size = new System.Drawing.Size(115, 23);
             this.skladkaChorobowaTextBox.TabIndex = 4;
             // 
@@ -228,6 +233,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sumaSkladekTextBox.Location = new System.Drawing.Point(125, 88);
             this.sumaSkladekTextBox.Name = "sumaSkladekTextBox";
+            this.sumaSkladekTextBox.ReadOnly = true;
             this.sumaSkladekTextBox.Size = new System.Drawing.Size(115, 23);
             this.sumaSkladekTextBox.TabIndex = 5;
             // 
@@ -257,6 +263,7 @@
             // 
             this.kwotaNettoTextBox.Location = new System.Drawing.Point(131, 26);
             this.kwotaNettoTextBox.Name = "kwotaNettoTextBox";
+            this.kwotaNettoTextBox.ReadOnly = true;
             this.kwotaNettoTextBox.Size = new System.Drawing.Size(115, 23);
             this.kwotaNettoTextBox.TabIndex = 0;
             // 

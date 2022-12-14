@@ -19,6 +19,8 @@ namespace PWO
 
         private void obliczButton_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(kwotaBruttoTextBox.Text) || string.IsNullOrWhiteSpace(kwotaBruttoTextBox.Text))
+                return;
             try
             {
                 SalaryData result = SalaryCalculator.CalculateSalary(Convert.ToDecimal(kwotaBruttoTextBox.Text), pit0CheckBox.Checked);
@@ -39,7 +41,11 @@ namespace PWO
 
         private void kwotaBruttoTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !char.IsDigit(e.KeyChar) && e.KeyChar != '.';
+            e.Handled = !char.IsDigit(e.KeyChar) && e.KeyChar != '.' && !char.IsControl(e.KeyChar);
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
