@@ -33,9 +33,9 @@ namespace PWO
             await RefreshAsync();
         }
 
-        private void Module2_Load(object sender, EventArgs e)
+        private async void Module2_Load(object sender, EventArgs e)
         {
-            RefreshAsync();
+            await RefreshAsync();
         }
 
         private async void button2_Click(object sender, EventArgs e)

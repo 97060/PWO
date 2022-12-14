@@ -31,6 +31,11 @@
             this.components = new System.ComponentModel.Container();
             this.saveButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.opisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kwotaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rejestrDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -65,6 +70,12 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.dataDataGridViewTextBoxColumn,
+            this.typDataGridViewTextBoxColumn,
+            this.opisDataGridViewTextBoxColumn,
+            this.kwotaDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.rejestrDataBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.MultiSelect = false;
@@ -75,6 +86,51 @@
             this.dataGridView1.Size = new System.Drawing.Size(606, 263);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dataGridView1_RowStateChanged);
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            this.idDataGridViewTextBoxColumn.Width = 42;
+            // 
+            // dataDataGridViewTextBoxColumn
+            // 
+            this.dataDataGridViewTextBoxColumn.DataPropertyName = "Data";
+            this.dataDataGridViewTextBoxColumn.HeaderText = "Data";
+            this.dataDataGridViewTextBoxColumn.Name = "dataDataGridViewTextBoxColumn";
+            this.dataDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataDataGridViewTextBoxColumn.Width = 56;
+            // 
+            // typDataGridViewTextBoxColumn
+            // 
+            this.typDataGridViewTextBoxColumn.DataPropertyName = "Typ";
+            this.typDataGridViewTextBoxColumn.HeaderText = "Typ";
+            this.typDataGridViewTextBoxColumn.Name = "typDataGridViewTextBoxColumn";
+            this.typDataGridViewTextBoxColumn.ReadOnly = true;
+            this.typDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // opisDataGridViewTextBoxColumn
+            // 
+            this.opisDataGridViewTextBoxColumn.DataPropertyName = "Opis";
+            this.opisDataGridViewTextBoxColumn.HeaderText = "Opis";
+            this.opisDataGridViewTextBoxColumn.Name = "opisDataGridViewTextBoxColumn";
+            this.opisDataGridViewTextBoxColumn.ReadOnly = true;
+            this.opisDataGridViewTextBoxColumn.Width = 56;
+            // 
+            // kwotaDataGridViewTextBoxColumn
+            // 
+            this.kwotaDataGridViewTextBoxColumn.DataPropertyName = "Kwota";
+            this.kwotaDataGridViewTextBoxColumn.HeaderText = "Kwota (PLN)";
+            this.kwotaDataGridViewTextBoxColumn.Name = "kwotaDataGridViewTextBoxColumn";
+            this.kwotaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.kwotaDataGridViewTextBoxColumn.Width = 98;
+            // 
+            // rejestrDataBindingSource
+            // 
+            this.rejestrDataBindingSource.DataSource = typeof(PWO.RejestrData);
+            // 
             // 
             // comboBox1
             // 
