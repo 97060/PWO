@@ -16,5 +16,30 @@ namespace PWO
         {
             InitializeComponent();
         }
+
+        private void obliczButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SalaryData result = SalaryCalculator.CalculateSalary(Convert.ToDecimal(kwotaBruttoTextBox.Text), pit0CheckBox.Checked);
+                kwotaNettoTextBox.Text = result.Netto.ToString("0.00");
+                skladkaEmerytalnaTextBox.Text = result.SkladkaEmerytalna.ToString("0.00");
+                skladkaRentowaTextBox.Text = result.SkladkaRentowna.ToString("0.00");
+                skladkaChorobowaTextBox.Text = result.SkladkaChorobowa.ToString("0.00");
+                skladkaZdrowotnaTextBox.Text = result.SkladkaZdrowotna.ToString("0.00");
+                sumaSkladekTextBox.Text = result.SkladkiSpoleczne.ToString("0.00");
+                podatekTextBox.Text = result.Tax.ToString("0.00");
+            }
+            catch (AmountLessThanOrEqualZeroException)
+            {
+                MessageBox.Show("Wprowadzona wartość musi być większa niż 0.");
+            }
+            
+        }
+
+        private void kwotaBruttoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && e.KeyChar != '.';
+        }
     }
 }
