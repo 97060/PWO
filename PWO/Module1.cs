@@ -1,20 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace PWO
+﻿namespace PWO
 {
     public partial class Module1 : UserControl
     {
+        private ExchangeRateClient _exchangeRate;
         public Module1()
         {
+            _exchangeRate = new();
             InitializeComponent();
+        }
+
+        private async void button1_Click(object sender, EventArgs e)
+        {
+            button1.Enabled = false;
+            dataGridView1.Visible = false;
+            dataGridView1.DataSource = await _exchangeRate.GetData();
+            dataGridView1.Visible = true;
+            button1.Enabled  = true;
         }
     }
 }
